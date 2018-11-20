@@ -1,190 +1,184 @@
-/*
- * Hello. 2 points.
- */
+<!DOCTYPE html>
 
-function hello() {
+<html>
+  <head>
+    <title>Problem Set 4</title>
 
-  // WRITE YOUR EXERCISE 1 CODE HERE
-  var p = document.getElementById("output1");
-	p.innerHTML = "Hello, AP Computer Science Principles!";
-  ////////////////// DO NOT MODIFY
-  check("hello"); // DO NOT MODIFY
-  ////////////////// DO NOT MODIFY
-}
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/problem-set-4.css"/>
 
-/*
- * Hello, Again. 3 points.
- */
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/problem-set-4.js"></script>
+    <script type="text/javascript" src="js/problem-set-4-check-hidden.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>PROBLEM SET 4</h1>
+      <hr/>
+    </div>
 
-function helloAgain() {
+    <div class="exercise" id="exercise1">
+      <button onclick="hello()">Hello</button>
 
-  //////////// DO NOT MODIFY
-  let name; // DO NOT MODIFY
-  //////////// DO NOT MODIFY
+      <h3>OUTPUT</h3>
+      <div class="output" id="output1">
 
-  // Use the name variable declared above to store the user's response. You
-  // do not need to re-declare it, only assign it a value.
+      </div>
 
-  // WRITE YOUR EXERCISE 2 CODE HERE
-  name = prompt("Enter your name : ", "Your name here ")
-  var p = document.getElementById("output2");
-  p.innerHTML = ("Hello, " + name + "!");
+      <br/>
 
-  ///////////////////////////// DO NOT MODIFY
-  check("helloAgain", name); // DO NOT MODIFY
-  ///////////////////////////// DO NOT MODIFY
-}
+      <h3>RESULT</h3>
+      <div class="result" id="result1">
 
-/*
- * Celsius. 5 points.
- */
+      </div>
+    </div>
 
-function celsius() {
+    <div class="exercise" id="exercise2">
+      <button onclick="helloAgain()">Hello, Again</button>
 
-  //////////////////////////////////////////////////////// DO NOT MODIFY
-  let cels = ((Math.random() * 1001) - 100).toFixed(2); // DO NOT MODIFY
-  //////////////////////////////////////////////////////// DO NOT MODIFY
+      <h3>OUTPUT</h3>
+      <div class="output" id="output2">
 
-  // The above code generates a random number between -100 and 1000
-  // (inclusive), and rounds this value to 2 decimal places.
+      </div>
 
-  // WRITE YOUR EXERCISE 3 CODE HERE
-  var fahr = ((cels * 9/5 + 32).toFixed(2));
-  var p = document.getElementById("output3");
-  p.innerHTML = (cels + " degrees Celsius equals " + fahr + " degrees Fahrenheit.");
-  ////////////////////////// DO NOT MODIFY
-  check("celsius", cels); // DO NOT MODIFY
-  ////////////////////////// DO NOT MODIFY
-}
+      <br/>
 
-/*
- * Fahrenheit. 5 points.
- */
+      <h3>RESULT</h3>
+      <div class="result" id="result2">
 
-function fahrenheit() {
+      </div>
+    </div>
 
-  //////////////////////////////////////////////////////// DO NOT MODIFY
-  let fahr = ((Math.random() * 1001) - 100).toFixed(2); // DO NOT MODIFY
-  //////////////////////////////////////////////////////// DO NOT MODIFY
+    <div class="exercise" id="exercise3">
+      <button onclick="celsius()">Celsius</button>
 
-  // The above code generates a random number between -100 and 1000
-  // (inclusive), and rounds this value to 2 decimal places.
+      <h3>OUTPUT</h3>
+      <div class="output" id="output3">
 
-  // WRITE YOUR EXERCISE 4 CODE HERE
-  var cels = (((fahr - 32) * 5/9).toFixed(2));
-  var p = document.getElementById("output4");
-  p.innerHTML = (fahr + " degrees Fahrenheit equals " + cels + " degrees Celsius.");
-  ///////////////////////////// DO NOT MODIFY
-  check("fahrenheit", fahr); // DO NOT MODIFY
-  ///////////////////////////// DO NOT MODIFY
-}
+      </div>
 
-/*
- * Inches. 5 points.
- */
+      <br/>
 
-function inches() {
-  /////////////////////////////////////////////////////// DO NOT MODIFY
-  let input = prompt("Enter a non-negative integer."); // DO NOT MODIFY
-  /////////////////////////////////////////////////////// DO NOT MODIFY
+      <h3>RESULT</h3>
+      <div class="result" id="result3">
 
-  // You are free to modify the value of inches, which you'll likely
-  // need to do. Please do not modify the value of input.
+      </div>
+    </div>
 
-  ////////////////////// DO NOT MODIFY
-  let inches = input; // DO NOT MODIFY
-  ////////////////////// DO NOT MODIFY
+    <div class="exercise" id="exercise4">
+      <button onclick="fahrenheit()">Fahrenheit</button>
 
-  // WRITE YOUR EXERCISE 5 CODE HERE
-  let amountMiles = (inches - inches % 63360)/(63360);
-  let amountYards = (inches - amountMiles * 63360 - inches % 36)/(36);
-  let amountFeet = (inches - amountMiles * 63360 - amountYards * 36 - inches % 12)/(12);
-  let amountInches = (inches % 12);
-  var p = document.getElementById("output5");
-  p.innerHTML = `Miles: ${amountMiles}<br>Yards: ${amountYards}<br>Feet: ${amountFeet}<br>Inches: ${amountInches}`;
-  ////////////////////////// DO NOT MODIFY
-  check("inches", input); // DO NOT MODIFY
-  ////////////////////////// DO NOT MODIFY
-}
+      <h3>OUTPUT</h3>
+      <div class="output" id="output4">
 
-/*
- * Centimeters. 5 points.
- */
+      </div>
 
-function centimeters() {
+      <br/>
 
-  /////////////////////////////////////////////////////// DO NOT MODIFY
-  let input = prompt("Enter a non-negative integer."); // DO NOT MODIFY
-  /////////////////////////////////////////////////////// DO NOT MODIFY
+      <h3>RESULT</h3>
+      <div class="result" id="result4">
 
-  // You are free to modify the value of centimeters, which you'll
-  // likely need to do. Please do not modify the value of input.
+      </div>
+    </div>
 
-  /////////////////////////// DO NOT MODIFY
-  let centimeters = input; // DO NOT MODIFY
-  /////////////////////////// DO NOT MODIFY
+    <div class="exercise" id="exercise5">
+      <button onclick="inches()">Inches</button>
 
-  // WRITE YOUR EXERCISE 6 CODE HERE
-  let amountKilometers = (centimeters - centimeters % 100000)/(100000);
-  let amountMeters = (centimeters - centimeters % 100 - amountKilometers * 100000)/(100);
-  let amountCentimeters = (centimeters % 100);
-  let p = document.getElementById("output6");
-  p.innerHTML = `Kilometers: ${amountKilometers}<br>Meters: ${amountMeters}<br>Centimeters: ${amountCentimeters}`;
-  /////////////////////////////// DO NOT MODIFY
-  check("centimeters", input); // DO NOT MODIFY
-  /////////////////////////////// DO NOT MODIFY
-}
+      <h3>OUTPUT</h3>
+      <div class="output" id="output5">
 
-/*
- * Fluid Ounces. 5 points.
- */
+      </div>
 
-function fluidOunces() {
+      <br/>
 
-  /////////////////////////////////////////////////////// DO NOT MODIFY
-  let input = prompt("Enter a non-negative integer."); // DO NOT MODIFY
-  /////////////////////////////////////////////////////// DO NOT MODIFY
+      <h3>RESULT</h3>
+      <div class="result" id="result5">
 
-  // You are free to modify the value of fluidOunces, which you'll
-  // likely need to do. Please do not modify the value of input.
+      </div>
+    </div>
 
-  /////////////////////////// DO NOT MODIFY
-  let fluidOunces = input; // DO NOT MODIFY
-  /////////////////////////// DO NOT MODIFY
+    <div class="exercise" id="exercise6">
+      <button onclick="centimeters()">Centimeters</button>
 
-  // WRITE YOUR EXERCISE 7 CODE HERE
-  let amountGallons = (fluidOunces - fluidOunces % 128)/(128);
-  let amountQuarts = (fluidOunces - amountGallons * 128 - fluidOunces % 32)/(32);
-  let amountPints = (fluidOunces - amountGallons * 128 - amountQuarts * 32 - fluidOunces % 16)/(16);
-  let amountCups = (fluidOunces - amountGallons * 128 - amountQuarts * 32 - amountPints * 16 - fluidOunces % 8)/(8);
-  let amountFluidOunces = (fluidOunces % 8);
-  var p = document.getElementById("output7");
-  p.innerHTML = `Gallons: ${amountGallons}<br>Quarts: ${amountQuarts}<br>Pints: ${amountPints}<br>Cups: ${amountCups}<br>Fluid Ounces: ${amountFluidOunces}`;
-  /////////////////////////////// DO NOT MODIFY
-  check("fluidOunces", input); // DO NOT MODIFY
-  /////////////////////////////// DO NOT MODIFY
-}
+      <h3>OUTPUT</h3>
+      <div class="output" id="output6">
 
-/*
- * Ounces. 5 points.
- */
+      </div>
 
-function ounces() {
+      <br/>
 
-  /////////////////////////////////////////////////////// DO NOT MODIFY
-  let input = prompt("Enter a non-negative integer."); // DO NOT MODIFY
-  /////////////////////////////////////////////////////// DO NOT MODIFY
+      <h3>RESULT</h3>
+      <div class="result" id="result6">
 
-  // You are free to modify the value of ounces, which you'll likely
-  // need to do. Please do not modify the value of input.
+      </div>
+    </div>
 
-  ////////////////////// DO NOT MODIFY
-  let ounces = input; // DO NOT MODIFY
-  ////////////////////// DO NOT MODIFY
+    <div class="exercise" id="exercise7">
+      <button onclick="fluidOunces()">Fluid Ounces</button>
 
-  // WRITE YOUR EXERCISE 8 CODE HERE
-  let amountTons = (ounces - ounces % 32000)/(32000);
-  let amountPounds = (ounces - amountTons * 32000 - ounces % 16)/(16);
+      <h3>OUTPUT</h3>
+      <div class="output" id="output7">
+
+      </div>
+
+      <br/>
+
+      <h3>RESULT</h3>
+      <div class="result" id="result7">
+
+      </div>
+    </div>
+
+    <div class="exercise" id="exercise8">
+      <button onclick="ounces()">Ounces</button>
+
+      <h3>OUTPUT</h3>
+      <div class="output" id="output8">
+
+      </div>
+
+      <br/>
+
+      <h3>RESULT</h3>
+      <div class="result" id="result8">
+
+      </div>
+    </div>
+
+    <div class="exercise" id="exercise9">
+      <button onclick="money()">Money</button>
+
+      <h3>OUTPUT</h3>
+      <div class="output" id="output9">
+
+      </div>
+
+      <br/>
+
+      <h3>RESULT</h3>
+      <div class="result" id="result9">
+
+      </div>
+    </div>
+
+    <div class="exercise" id="exercise10">
+      <button onclick="change();">Change</button>
+
+      <h3>OUTPUT</h3>
+      <div class="output" id="output10">
+
+      </div>
+
+      <br/>
+
+      <h3>RESULT</h3>
+      <div class="result" id="result10">
+
+      </div>
+    </div>
+  </body>
+</html>
+
   let amountOunces = (ounces % 16);
   var p = document.getElementById("output8");
   p.innerHTML = `Tons: ${amountTons}<br>Pounds: ${amountPounds}<br>Ounces: ${amountOunces}`;
